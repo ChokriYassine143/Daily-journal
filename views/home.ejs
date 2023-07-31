@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p> <%= homeStartingContent %> </p>
+<% if (postes.length!==0){ %>
+ <%   for( let i=0;i< postes.length;i++)  { %>
+    <h2> <%= postes[i].title %> </h2>
+    <p>   <%= postes[i].body.slice(0,100) %>  <a href="/posts/<%= postes[i]._id %>">Read More</a> </p>
+
+    <% } %>
+    <% } %>
+<%- include("partials/footer") -%>
